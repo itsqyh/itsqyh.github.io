@@ -86,7 +86,7 @@
           function information_flow_stop() {
             document.getElementById('information-flow').style.opacity = "0";
           }
-          semireward_stop()
+          information_flow_stop()
         </script>
       </td>
       <td style="padding:20px;width:75%;vertical-align:middle">
@@ -134,7 +134,7 @@
           function eah_stop() {
             document.getElementById('eah_image').style.opacity = "0";
           }
-          openmix_stop()
+          eah_stop()
         </script>
       </td>
       <td style="padding:20px;width:75%;vertical-align:middle">
@@ -156,6 +156,47 @@
         <p></p>
         <p>
           A plug-and-play and training-free method showing significant hallucination-mitigating performance on different VLMs and metrics.
+        </p>
+      </td>
+    </tr>
+
+    <tr onmouseout="Simignore_stop()" onmouseover="Simignore_start()">
+      <td style="padding:20px;width:25%;vertical-align:middle">
+        <div class="one">
+          <div class="two" id='Simignore_image'><video  width=100% muted autoplay loop>
+          <source src="images/Simignore structure.png" type="video/mp4">
+          Your browser does not support the video tag.
+          </video></div>
+          <img src='images/Simignore structure.png' width=100%>
+        </div>
+        <script type="text/javascript">
+          function Simignore_start() {
+            document.getElementById('Simignore_image').style.opacity = "1";
+          }
+
+          function Simignore_stop() {
+            document.getElementById('Simignore_image').style.opacity = "0";
+          }
+          Simignore_stop()
+        </script>
+      </td>
+      <td style="padding:20px;width:75%;vertical-align:middle">
+        <a href="https://github.com/itsqyh/EAH">
+          <span class="papertitle">EAH: Enhancing Attention Heads to Alleviate Hallucination in LVLMs</span>
+        </a>
+        <br>
+	        <a href="">Fanshuo Zeng</a>,
+		<strong>Yihao Quan*</strong>,
+	      	<a href="">Xiaofeng Zhang</a>,
+		<a href="">Zheng Hui</a>,
+		<a href="">Jiawei Yao</a>,
+        <br>
+        <em>AAAI'25</em>, Under Review
+        <br>
+        <a href="https://github.com/FanshuoZeng/Simignore">project page</a>
+        <p></p>
+        <p>
+          A novel image token reduction method, Simignore, designed to enhance the complex reasoning capabilities.
         </p>
       </td>
     </tr>
