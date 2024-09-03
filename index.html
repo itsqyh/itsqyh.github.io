@@ -3,7 +3,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-    <title>Weiyang Jin</title>
+    <title>Yihao Quan</title>
 
     <meta name="author" content="Yihao Quan">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -55,49 +55,47 @@
 
 
 
-    <tr onmouseout="semireward_stop()" onmouseover="semireward_start()" bgcolor="#ffffd0">
+    <tr onmouseout="information-flow_stop()" onmouseover="information-flow_start()" bgcolor="#ffffd0">
       <td style="padding:20px;width:25%;vertical-align:middle">
         <div class="one">
-          <div class="two" id='semireward_image'><video  width=100% muted autoplay loop>
-          <source src="images/semireward.png" type="video/mp4">
+          <div class="two" id='information-flow'><video  width=100% muted autoplay loop>
+          <source src="images/sinformation-flow.pdf" type="video/mp4">
           Your browser does not support the video tag.
           </video></div>
-          <img src='images/semireward.png' width=100%>
+          <img src='images/information-flow.pdf' width=100%>
         </div>
         <script type="text/javascript">
           function semireward_start() {
-            document.getElementById('semireward_image').style.opacity = "1";
+            document.getElementById('information-flow').style.opacity = "1";
           }
 
           function semireward_stop() {
-            document.getElementById('semireward_image').style.opacity = "0";
+            document.getElementById('information-flow').style.opacity = "0";
           }
           semireward_stop()
         </script>
       </td>
       <td style="padding:20px;width:75%;vertical-align:middle">
-        <a href="https://github.com/Westlake-AI/SemiReward/">
-          <span class="papertitle">SemiReward: A General Reward Model for Semi-supervised Learning</span>
+        <a href="https://github.com/zhangbaijin/From-Redundancy-to-Relevance?tab=readme-ov-file">
+          <span class="papertitle">An Information Flow Perspective for Exploring Large Vision Language Models on Reasoning Tasks</span>
         </a>
         <br>
-		<a href="https://lupin1998.github.io/">Siyuan Li*</a>,
-		<strong>Weiyang Jin*</strong>,
-		<a href="">Zedong Wang</a>,
-		<a href="">Fang Wu</a>,
-		<a href="">Zicheng Liu</a>,
-    <a href="">Cheng Tan</a>,
-    <a href="">Stan Z. Li</a>
+		<a href="https://lupin1998.github.io/">Xiaofeng Zhang*</a>,
+		<strong>Yihao Quan*</strong>,
+		<a href="">Chaochen Gu</a>,
+		<a href="">Chen Shen</a>,
+		<a href="">Xiaosong Yuan</a>,
+	        <a href="">Shaotian Yan</a>,
+	        <a href="">Jieping Ye</a>,
         <br>
-        <em>ICLR</em>, 2024
+        <em>AAAI'25</em>, Under Review
         <br>
         <a href="https://github.com/Westlake-AI/SemiReward/">project page</a>
         /
-        <a href="https://zhuanlan.zhihu.com/p/680998327">zhihu</a>
-        /
-        <a href="https://arxiv.org/abs/2310.03013">arXiv</a>
+        <a href="https://arxiv.org/abs/2406.06579">arXiv</a>
         <p></p>
         <p>
-          A simple and effective pseudo-label evaluation algorithm is designed and combined with the Reward Model, which can be friendly used in data-centric scenarios.
+          A unique perspective to enhance understanding of LVLMs and their functioning, particularly for complex reasoning tasks.
         </p>
       </td>
     </tr>
