@@ -69,7 +69,7 @@
 
 
 
-    <tr onmouseout="information-flow_stop()" onmouseover="information-flow_start()" bgcolor="#ffffd0">
+    <tr onmouseout="information_flow_stop()" onmouseover="information_flow_start()" bgcolor="#ffffd0">
       <td style="padding:20px;width:25%;vertical-align:middle">
         <div class="one">
           <div class="two" id='information-flow'><video  width=100% muted autoplay loop>
@@ -79,11 +79,11 @@
           <img src='images/horse.png' width=100%>
         </div>
         <script type="text/javascript">
-          function semireward_start() {
+          function information_flow_start() {
             document.getElementById('information-flow').style.opacity = "1";
           }
 
-          function semireward_stop() {
+          function information_flow_stop() {
             document.getElementById('information-flow').style.opacity = "0";
           }
           semireward_stop()
@@ -94,12 +94,15 @@
           <span class="papertitle">An Information Flow Perspective for Exploring Large Vision Language Models on Reasoning Tasks</span>
         </a>
         <br>
-		<a href="https://lupin1998.github.io/">Xiaofeng Zhang*</a>,
+		<a href="">Xiaofeng Zhang*</a>,
 		<strong>Yihao Quan*</strong>,
 		<a href="">Chaochen Gu</a>,
 		<a href="">Chen Shen</a>,
 		<a href="">Xiaosong Yuan</a>,
 	        <a href="">Shaotian Yan</a>,
+	        <a href="">Liang Xie</a>,
+	        <a href="">Wenxiao Wang,
+		<a href="">Hao Tang,
 	        <a href="">Jieping Ye</a>,
         <br>
         <em>AAAI'25</em>, Under Review
@@ -114,47 +117,45 @@
       </td>
     </tr>
 
-    <tr onmouseout="openmix_stop()" onmouseover="openmix_start()">
+    <tr onmouseout="eah_stop()" onmouseover="eah_start()">
       <td style="padding:20px;width:25%;vertical-align:middle">
         <div class="one">
-          <div class="two" id='openmix_image'><video  width=100% muted autoplay loop>
-          <source src="images/openmix.png" type="video/mp4">
+          <div class="two" id='eah_image'><video  width=100% muted autoplay loop>
+          <source src="images/head-compare.png" type="video/mp4">
           Your browser does not support the video tag.
           </video></div>
-          <img src='images/openmix.png' width=100%>
+          <img src='images/head-compare.png' width=100%>
         </div>
         <script type="text/javascript">
-          function openmix_start() {
-            document.getElementById('openmix_image').style.opacity = "1";
+          function eah_start() {
+            document.getElementById('eah_image').style.opacity = "1";
           }
 
-          function openmix_stop() {
-            document.getElementById('openmix_image').style.opacity = "0";
+          function eah_stop() {
+            document.getElementById('eah_image').style.opacity = "0";
           }
           openmix_stop()
         </script>
       </td>
       <td style="padding:20px;width:75%;vertical-align:middle">
-        <a href="https://github.com/Westlake-AI/openmixup/">
-          <span class="papertitle">OpenMixup: A Comprehensive Mixup Benchmark for Visual Classification</span>
+        <a href="https://github.com/itsqyh/EAH">
+          <span class="papertitle">EAH: Enhancing Attention Heads to Alleviate Hallucination in LVLMs</span>
         </a>
         <br>
-		<a href="https://lupin1998.github.io/">Siyuan Li*</a>,
-		<a href="">Zedong Wang*</a>,
-		<a href="">Zicheng Liu*</a>,
-		<a href="">Di Wu</a>,
-    <a href="">Cheng Tan</a>,
-    <strong>Weiyang Jin</strong>,
-    <a href="">Stan Z. Li</a>
+		<strong>Yihao Quan*</strong>,
+	      	<a href="">Xiaofeng Zhang*</a>,
+		<a href="">Chaochen Gu</a>,
+		<a href="">Chen Shen</a>,
+		<a href="">Xiaosong Yuan</a>,
+	        <a href="">Shaotian Yan</a>,
+	        <a href="">Jieping Ye</a>,
         <br>
-        <em>Arxiv</em>, 2022
+        <em>AAAI'25</em>, Under Review
         <br>
-        <a href="https://github.com/Westlake-AI/openmixup/">project page</a>
-        /
-        <a href="https://arxiv.org/abs/2209.04851">arXiv</a>
+        <a href="https://github.com/itsqyh/EAH">project page</a>
         <p></p>
         <p>
-          A great benchmark for mix-up task bolster the reproducibility of previously gained insights and facilitate a better understanding of mixup properties.
+          A plug-and-play and training-free method showing significant hallucination-mitigating performance on different VLMs and metrics.
         </p>
       </td>
     </tr>
