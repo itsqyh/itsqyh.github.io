@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="47px" height="47px" viewBox="0 0 47 47" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>B_video</title>
+    <g id="Main" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="桌面端" transform="translate(-215.000000, -1486.000000)" fill="#FFFFFF">
+            <g id="B_video" transform="translate(215.000000, 1486.000000)">
+                <circle id="椭圆形备份-13" fill-opacity="0.3" fill-rule="nonzero" cx="23.5" cy="23.5" r="23.5"></circle>
+                <g id="编组-5备份-3" transform="translate(14.000000, 16.000000)">
+                    <path d="M17.99996,16 L2,16 C0.9,16 0,15.1 0,14 L0,2 C0,0.9 0.9,0 2,0 L17.99996,0 C19.09996,0 19.99996,0.9 19.99996,2 L19.99996,14 C19.99996,15.1 19.09996,16 17.99996,16 Z" id="路径" fill-opacity="0.3"></path>
+                    <g id="play" transform="translate(5.300000, 3.000000)" fill-rule="nonzero">
+                        <path d="M0,1.31873405 C0,0.305091557 1.11111235,-0.328445978 1.99998,0.178375272 L9.3333437,4.35966155 C10.2222336,4.8664828 10.2222114,6.13353592 9.33332148,6.64035717 L1.99998,10.8216215 C1.11109012,11.3284428 0,10.6949272 0,9.68128466 L0,1.31873405 Z" id="路径"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
