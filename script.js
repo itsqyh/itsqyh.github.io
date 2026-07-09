@@ -1,70 +1,69 @@
-document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      if (this.getAttribute('href') === '#') return;
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        target.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
-      }
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", (event) => {
+      const href = anchor.getAttribute("href");
+      if (!href || href === "#") return;
+
+      const target = document.querySelector(href);
+      if (!target) return;
+
+      event.preventDefault();
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
     });
   });
 
-  const gallery = document.querySelector('.gallery');
-  if (gallery) {
-    let isDown = false;
-    let startX;
-    let scrollLeft;
+  const photoDeck = document.querySelector(".photo-deck");
+  const photoStack = document.querySelector(".photo-stack");
+  const gallery = document.querySelector(".gallery");
 
-    gallery.addEventListener('mousedown', (e) => {
-      isDown = true;
-      gallery.style.cursor = 'grabbing';
-      startX = e.pageX - gallery.offsetLeft;
-      scrollLeft = gallery.scrollLeft;
-    });
+  function setGalleryExpanded(expanded) {
+    if (!photoDeck || !photoStack || !gallery) return;
+    photoDeck.classList.toggle("is-expanded", expanded);
+    photoStack.setAttribute("aria-expanded", String(expanded));
+    gallery.setAttribute("aria-hidden", String(!expanded));
+  }
 
-    gallery.addEventListener('mouseleave', () => {
-      isDown = false;
-      gallery.style.cursor = 'grab';
-    });
-
-    gallery.addEventListener('mouseup', () => {
-      isDown = false;
-      gallery.style.cursor = 'grab';
-    });
-
-    gallery.addEventListener('mousemove', (e) => {
-      if (!isDown) return;
-      e.preventDefault();
-      const x = e.pageX - gallery.offsetLeft;
-      const walk = (x - startX) * 2;
-      gallery.scrollLeft = scrollLeft - walk;
+  if (photoStack) {
+    photoStack.addEventListener("click", () => {
+      setGalleryExpanded(!photoDeck.classList.contains("is-expanded"));
     });
   }
 
-  document.querySelectorAll('.gallery-item img').forEach(img => {
-    img.addEventListener('click', function() {
-      document.getElementById('gallery-modal-img').src = this.src;
-      document.getElementById('gallery-modal-img').alt = this.alt;
-      document.getElementById('gallery-modal').hidden = false;
-      document.body.style.overflow = 'hidden';
+  const modal = document.getElementById("gallery-modal");
+  const modalImage = document.getElementById("gallery-modal-img");
+  const closeButton = document.querySelector(".gallery-close");
+
+  function closeModal() {
+    if (!modal) return;
+    modal.hidden = true;
+    document.body.style.overflow = "";
+  }
+
+  document.querySelectorAll(".gallery-item").forEach((button) => {
+    button.addEventListener("click", () => {
+      if (photoDeck && !photoDeck.classList.contains("is-expanded")) return;
+
+      const image = button.querySelector("img");
+      if (!modal || !modalImage || !image) return;
+
+      modalImage.src = image.src;
+      modalImage.alt = image.alt;
+      modal.hidden = false;
+      document.body.style.overflow = "hidden";
     });
   });
 
-  document.getElementById('gallery-modal').addEventListener('click', function(e) {
-    if (e.target === this) {
-      this.hidden = true;
-      document.body.style.overflow = '';
-    }
-  });
+  if (modal) {
+    modal.addEventListener("click", (event) => {
+      if (event.target === modal) closeModal();
+    });
+  }
 
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') {
-      document.getElementById('gallery-modal').hidden = true;
-      document.body.style.overflow = '';
-    }
+  if (closeButton) {
+    closeButton.addEventListener("click", closeModal);
+  }
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeModal();
   });
 });
