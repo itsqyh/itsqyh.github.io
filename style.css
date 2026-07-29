@@ -237,6 +237,26 @@ img {
   font-size: 12px;
 }
 
+.photo-section-title {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 13px;
+  align-items: baseline;
+  margin-bottom: 22px;
+}
+
+.photo-section-title h2 {
+  margin-bottom: 0;
+}
+
+.photo-section-hint {
+  color: var(--ink-faint);
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.01em;
+  transform: rotate(0.5deg);
+}
+
 .news-list {
   max-height: 282px;
   overflow-y: auto;
