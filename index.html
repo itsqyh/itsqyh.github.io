@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&amp;family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&amp;family=JetBrains+Mono:wght@300;400;500&amp;display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=20260729-3" />
+  <link rel="stylesheet" href="style.css?v=20260729-4" />
 </head>
 <body>
   <main>
@@ -87,7 +87,14 @@
     <section class="section" id="papers" aria-labelledby="papers-title">
       <h2 id="papers-title">selected papers</h2>
       <p class="section-note">* = equal contribution.</p>
-      <ol class="papers">
+      <div class="paper-categories">
+        <details class="paper-category" open>
+          <summary>
+            <span class="paper-category-name">Agentic AI</span>
+            <span class="paper-category-count" aria-hidden="true">2</span>
+            <span class="visually-hidden">2 papers</span>
+          </summary>
+          <ol class="papers">
         <li>
           <article class="paper">
             <a class="thumb" href="https://arxiv.org/abs/2606.22673" target="_blank" rel="noopener noreferrer" aria-label="Open AgentLens preprint">
@@ -100,21 +107,6 @@
               <p class="paper-links">
                 <a href="https://arxiv.org/abs/2606.22673" target="_blank" rel="noopener noreferrer">paper</a>
                 <a href="https://github.com/EddyLuo1232/AgentLens" target="_blank" rel="noopener noreferrer">code</a>
-              </p>
-            </div>
-          </article>
-        </li>
-        <li>
-          <article class="paper">
-            <a class="thumb" href="https://arxiv.org/abs/2603.14117" target="_blank" rel="noopener noreferrer" aria-label="Open visual reasoning preprint">
-              <img src="assets/preprints/thinking_image_cover.png" alt="Visual reasoning preprint preview" />
-            </a>
-            <div class="paper-meta">
-              <p class="venue">Preprint</p>
-              <h3><a href="https://arxiv.org/abs/2603.14117" target="_blank" rel="noopener noreferrer">Improving Visual Reasoning with Iterative Evidence Refinement</a></h3>
-              <p class="authors">Zeru Shi*, Kai Mei*, <span class="me">Yihao Quan</span>, Dimitris N. Metaxas, Ruixiang Tang</p>
-              <p class="paper-links">
-                <a href="https://arxiv.org/abs/2603.14117" target="_blank" rel="noopener noreferrer">paper</a>
               </p>
             </div>
           </article>
@@ -135,6 +127,31 @@
             </div>
           </article>
         </li>
+          </ol>
+        </details>
+
+        <details class="paper-category">
+          <summary>
+            <span class="paper-category-name">Visual Reasoning</span>
+            <span class="paper-category-count" aria-hidden="true">5</span>
+            <span class="visually-hidden">5 papers</span>
+          </summary>
+          <ol class="papers">
+            <li>
+              <article class="paper">
+                <a class="thumb" href="https://arxiv.org/abs/2603.14117" target="_blank" rel="noopener noreferrer" aria-label="Open visual reasoning preprint">
+                  <img src="assets/preprints/thinking_image_cover.png" alt="Visual reasoning preprint preview" />
+                </a>
+                <div class="paper-meta">
+                  <p class="venue">Preprint</p>
+                  <h3><a href="https://arxiv.org/abs/2603.14117" target="_blank" rel="noopener noreferrer">Improving Visual Reasoning with Iterative Evidence Refinement</a></h3>
+                  <p class="authors">Zeru Shi*, Kai Mei*, <span class="me">Yihao Quan</span>, Dimitris N. Metaxas, Ruixiang Tang</p>
+                  <p class="paper-links">
+                    <a href="https://arxiv.org/abs/2603.14117" target="_blank" rel="noopener noreferrer">paper</a>
+                  </p>
+                </div>
+              </article>
+            </li>
         <li>
           <article class="paper">
             <a class="thumb" href="https://arxiv.org/abs/2604.01460" target="_blank" rel="noopener noreferrer" aria-label="Open consistency reward paper">
@@ -182,6 +199,32 @@
             </div>
           </article>
         </li>
+            <li>
+              <article class="paper">
+                <a class="thumb" href="https://arxiv.org/abs/2412.09817" target="_blank" rel="noopener noreferrer" aria-label="Open Similarity Computation paper">
+                  <img src="assets/publications/simignore-cover.png?v=20260709-2" alt="Similarity Computation paper preview" />
+                </a>
+                <div class="paper-meta">
+                  <p class="venue">AAAI 2025</p>
+                  <h3><a href="https://arxiv.org/abs/2412.09817" target="_blank" rel="noopener noreferrer">Enhancing Multimodal Large Language Models Complex Reason via Similarity Computation</a></h3>
+                  <p class="authors">Xiaofeng Zhang*, Fanshuo Zeng*, <span class="me">Yihao Quan</span>, Zheng Hui, Jiawei Yao</p>
+                  <p class="paper-links">
+                    <a href="https://arxiv.org/abs/2412.09817" target="_blank" rel="noopener noreferrer">paper</a>
+                    <a href="https://github.com/0x4e8/Simignore" target="_blank" rel="noopener noreferrer">code</a>
+                  </p>
+                </div>
+              </article>
+            </li>
+          </ol>
+        </details>
+
+        <details class="paper-category">
+          <summary>
+            <span class="paper-category-name">Interpretability</span>
+            <span class="paper-category-count" aria-hidden="true">2</span>
+            <span class="visually-hidden">2 papers</span>
+          </summary>
+          <ol class="papers">
         <li>
           <article class="paper">
             <a class="thumb" href="https://arxiv.org/abs/2406.06579" target="_blank" rel="noopener noreferrer" aria-label="Open From Redundancy to Relevance paper">
@@ -213,23 +256,9 @@
             </div>
           </article>
         </li>
-        <li>
-          <article class="paper">
-            <a class="thumb" href="https://arxiv.org/abs/2412.09817" target="_blank" rel="noopener noreferrer" aria-label="Open Similarity Computation paper">
-              <img src="assets/publications/simignore-cover.png?v=20260709-2" alt="Similarity Computation paper preview" />
-            </a>
-            <div class="paper-meta">
-              <p class="venue">AAAI 2025</p>
-              <h3><a href="https://arxiv.org/abs/2412.09817" target="_blank" rel="noopener noreferrer">Enhancing Multimodal Large Language Models Complex Reason via Similarity Computation</a></h3>
-              <p class="authors">Xiaofeng Zhang*, Fanshuo Zeng*, <span class="me">Yihao Quan</span>, Zheng Hui, Jiawei Yao</p>
-              <p class="paper-links">
-                <a href="https://arxiv.org/abs/2412.09817" target="_blank" rel="noopener noreferrer">paper</a>
-                <a href="https://github.com/0x4e8/Simignore" target="_blank" rel="noopener noreferrer">code</a>
-              </p>
-            </div>
-          </article>
-        </li>
-      </ol>
+          </ol>
+        </details>
+      </div>
     </section>
 
     <section class="section" id="experience" aria-labelledby="experience-title">
