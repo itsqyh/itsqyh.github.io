@@ -12,6 +12,34 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  const paperCategories = Array.from(document.querySelectorAll(".paper-category"));
+  const paperAllToggle = document.querySelector(".paper-all-toggle");
+
+  function syncPaperAllToggle() {
+    if (!paperAllToggle || paperCategories.length === 0) return;
+    const allExpanded = paperCategories.every((category) => category.open);
+    paperAllToggle.setAttribute("aria-expanded", String(allExpanded));
+    paperAllToggle.setAttribute(
+      "aria-label",
+      allExpanded ? "Collapse all paper categories" : "Expand all paper categories"
+    );
+  }
+
+  if (paperAllToggle) {
+    paperAllToggle.addEventListener("click", () => {
+      const expandAll = !paperCategories.every((category) => category.open);
+      paperCategories.forEach((category) => {
+        category.open = expandAll;
+      });
+      syncPaperAllToggle();
+    });
+  }
+
+  paperCategories.forEach((category) => {
+    category.addEventListener("toggle", syncPaperAllToggle);
+  });
+  syncPaperAllToggle();
+
   const photoDeck = document.querySelector(".photo-deck");
   const photoStack = document.querySelector(".photo-stack");
   const gallery = document.querySelector(".gallery");
