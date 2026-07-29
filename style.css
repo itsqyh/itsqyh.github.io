@@ -585,7 +585,7 @@ img {
 }
 
 .photo-deck.is-expanded .gallery {
-  max-height: 560px;
+  max-height: 5000px;
   padding: 18px 2px 16px;
   opacity: 1;
   pointer-events: auto;
