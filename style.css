@@ -124,6 +124,55 @@ img {
   margin: 0 0 14px;
 }
 
+.intro .hero-actions {
+  margin: 22px 0 0;
+}
+
+.cv-button {
+  display: inline-flex;
+  min-height: 46px;
+  gap: 9px;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 17px 8px;
+  color: var(--paper);
+  font-family: var(--hand);
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 1;
+  background: var(--accent);
+  background-image: none;
+  border: 1px solid var(--accent);
+  border-radius: 3px;
+  box-shadow: 2px 3px 0 var(--accent-soft);
+  transform: rotate(-0.8deg);
+  transition:
+    color 180ms ease,
+    background-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.cv-button:hover {
+  color: var(--accent);
+  background: var(--paper-low);
+  background-image: none;
+  box-shadow: 1px 2px 0 var(--accent-soft);
+  transform: rotate(0) translateY(-1px);
+}
+
+.cv-button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+.cv-button-arrow {
+  font-family: var(--serif);
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1;
+}
+
 .contact-line {
   grid-column: 1 / -1;
   display: flex;
@@ -896,6 +945,10 @@ img {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .cv-button {
+    transition: none;
+  }
+
   .paper-category summary::after {
     transition: none;
   }
